@@ -16,12 +16,15 @@ I highly recommend that you go through this tutorial in **colab** by simply clic
 
 ![output 1](./files/main.png)
 Left: Input black & white images from test set | Right: the colorized outputs by the final model of this tutorial
+
 ---
 ![output2](./files/img1.png)
 Left: Input black & white images from test set | Right: the colorized outputs by the final model of this tutorial
+
 ---
 ![output3](./files/img2.png)
 Left: Input black & white images from test set | Right: the colorized outputs by the final model of this tutorial
+
 ---
 
 One of the most exciting applications of deep learning is colorizing black and white images.  This task needed a lot of human input and hardcoding several years ago but now the whole process can be done end-to-end with the power of AI and deep learning. You might think that you need huge amount of data or long training times to train your model from scratch for this task but in the last few weeks I worked on this and tried many different model architectures, loss functions, training strategies, etc. and finally developed an efficient strategy to train such a model, using the latest advances in deep learning, on a rather small dataset and with really short training times. In this article, I'm going to explain what I did to make this happen, including the code!, and the strategies that helped and also those that were not useful. Before that, I will explain the colorization problem and a give you a short review of what has been done in recent years. I'll assume you have basic knowledge about deep learning, GANs, and PyTorch library for the rest of the article. Let's begin!
@@ -637,12 +640,14 @@ Here I show you the outputs of the U-Net without adversarial training and U-Net 
 
 ![comparison](./files/comparison1.png)
 (Left: pretrained U-Net without adversarial training | Right: pretrained U-Net with adversarial training)
+
 ---
 
 You can also see the GIF below to observe the difference between the images better:
 
 ![anim](./files/anim_compare.gif)
 (animation of the last two images to better see the significant difference that adversarial training is making)
+
 ---
 
 ## Final words
