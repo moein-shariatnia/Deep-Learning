@@ -609,7 +609,7 @@ pretrain_generator(net_G, train_dl, opt, criterion, 20)
 #torch.save(net_G.state_dict(), "res18-unet.pt")
 ```
 
-With this simple function, we pretrain the generator for 20 epochs and then we save its weights. This took about one hour on my GPU. In the following section, we will use this model as the generator for our GAN and train the whole network as before:
+With this simple function, we pretrain the generator for 20 epochs and then we save its weights. This will take about one hour on Colab. In the following section, we will use this model as the generator for our GAN and train the whole network as before:
 
 ### 2.3 Putting everything together, again!
 
@@ -618,10 +618,10 @@ With this simple function, we pretrain the generator for 20 epochs and then we s
 net_G = build_res_unet(n_input=1, n_output=2, size=256)
 net_G.load_state_dict(torch.load("res18-unet.pt", map_location=device))
 model = MainModel(net_G=net_G)
-train_model(model, train_dl, 10)
+train_model(model, train_dl, 20)
 ```
 
-Here I'm first loading the saved weights for the generator and then I'm using this model as the generator in our MainModel class  which prevents it from randomly initializing the generator. Then we train the model only for 10 epochs! (compare it to the 100 epochs of the previous section when we didn't use pretraining). This took only about an hour on my device which is really great!
+Here I'm first loading the saved weights for the generator and then I'm using this model as the generator in our MainModel class  which prevents it from randomly initializing the generator. Then we train the model for 10 to 20 epochs! (compare it to the 100 epochs of the previous section when we didn't use pretraining). Each epoch will take about 3 to 4 minutes on Colab which is really great!
 
 you can refer to the images at the beginning of this tutorial to see the final outputs of this model.
 
