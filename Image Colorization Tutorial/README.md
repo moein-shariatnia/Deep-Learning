@@ -4,7 +4,7 @@
 
 **This is an advanced tutorial on _Image Colorization_ using deep learning and [PyTorch](https://pytorch.org/).**
 
-**This is [the related article](https:/) on TowardsDataScince by myself which you can check out. I've put the explanations here as well but one could prefer to read it from the article.**
+**This is [the related article](https://towardsdatascience.com/colorizing-black-white-images-with-u-net-and-conditional-gan-a-tutorial-81b2df111cd8) on **TowardsDataScince** by myself which you can check out. I've put the explanations here as well but one could prefer to read it from the article.**
 
 I highly recommend that you go through this tutorial in **colab** by simply clicking the **Open in Colab** badge below. You can train the models from scratch or downlaod the pretrained weights and use it to colorize your black & white images. All the tutorial explanations are included there as well.
 
