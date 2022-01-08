@@ -30,4 +30,5 @@ if __name__ == '__main__':
     model.eval()
     with torch.no_grad():
         preds = model.net_G(img.unsqueeze(0).to(device))
-    plt.imshow(lab_to_rgb(img.unsqueeze(0), preds.cpu())[0])
+    colorized = lab_to_rgb(img.unsqueeze(0), preds.cpu())[0]
+    plt.imshow(colorized)
