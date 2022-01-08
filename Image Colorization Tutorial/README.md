@@ -564,8 +564,13 @@ In fact, I'm going to use a pretrained ResNet18 as the backbone of my U-Net and 
 
 Building a U-Net with a ResNet backbone is not something trivial so I'll use fastai library's Dynamic U-Net module to easily build one. You can simply install fastai with pip or conda. Here's the link to the [documentation](https://docs.fast.ai/).
 
+---
+#### Update Jan 8th, 2022: <br> 
+You need to install fastai version 2.4 for the following lines code to run w/o errors.
+<br><br><br>
 
 ```python
+# pip install fastai==2.4
 from fastai.vision.learner import create_body
 from torchvision.models.resnet import resnet18
 from fastai.vision.models.unet import DynamicUnet
